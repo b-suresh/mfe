@@ -12,6 +12,7 @@ const devConfig = {
             index: 'index.html'
         }
     },
+    devtool: "source-map",
     plugins: [
         new ModuleFederationPlugin({
             name: 'container',
@@ -20,9 +21,6 @@ const devConfig = {
             },
             shared: packageJson.dependencies,
         }),
-        new HtmlWebpackPlugin({
-            template: './public/index.html'
-        })
     ],
 };
 
