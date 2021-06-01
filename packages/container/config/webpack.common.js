@@ -16,10 +16,10 @@ module.exports = {
             },
         ],
     },
-    devtool: "source-map",
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
+            inject: 'body',
         }),    
     ],
 };
